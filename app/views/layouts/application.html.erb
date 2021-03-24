@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Just Another Blog</title>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div><%= render 'shared/navigation' %></div>
+    <div class="intro-banner">
+      <h1>Just another blog</h1>
+    </div>
+    <%= render 'shared/messages' %>
+    <%= yield %>
+  </body>
+</html>

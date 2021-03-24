@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li><%= link_to "Home", root_path, :class => current_class?(root_path)  %></li>
+    <li><%= link_to "About", about_path, :class => current_class?(about_path) %></li>
+    <li class="create-link"><%= link_to "Create article", new_article_path, :class => current_class?(new_article_path) %></li>
+  </ul>
+</nav>
+
+

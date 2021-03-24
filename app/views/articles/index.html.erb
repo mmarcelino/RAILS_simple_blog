@@ -1,0 +1,11 @@
+<div class="main-container">
+  <div class="grid">
+     <% @articles.each do |article| %>
+     <div class="card-white">
+      <h2><%= article.title %></p>
+      <p><%= article.description %></p>
+      <p class="link"><%= link_to 'Show more', article_path(article) %></p>
+     </div>
+     <% end %>
+  </div>
+</div>

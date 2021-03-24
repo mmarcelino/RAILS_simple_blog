@@ -1,0 +1,43 @@
+<%= render 'shared/errors' %>
+
+<div class="row justify-content-center">
+ <div class="col-12 col-lg-6">
+  <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+  <div class="form-group">
+   <div class="control-label">
+    <%= f.label :title %>
+   </div>
+   <div>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title of article", autofocus: true %>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="control-label">
+    <%= f.label :description %>
+   </div>
+   <div>
+    <%= f.text_area :description, rows: 3, class: "form-control", placeholder: "Short description" %>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div class="control-label">
+    <%= f.label :body %>
+   </div>
+   <div>
+    <%= f.text_area :body, rows: 10, class: "form-control", placeholder: "Body of article" %>
+   </div>
+  </div>
+
+  <div class="form-group">
+   <div>
+    <%= f.submit class: 'btn btn-primary w-100 button' %>
+   </div>
+  </div>
+
+  <p class="link" style="font-weight: lighter; "><%= link_to '<< back', articles_path %></p>
+<% end %>
+ </div>
+</div>
